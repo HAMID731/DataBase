@@ -42,4 +42,4 @@ CREATE TABLE Orders (
 INSERT INTO Orders (UserID, TotalAmount, OrderStatus, Address)
 VALUES (1, 50.00, 'Shipped', '277 borno way');
 
-select * from Orders;
+select * from Orders,users,Products;

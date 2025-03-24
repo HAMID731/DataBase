@@ -1,0 +1,13 @@
+use cape_codd;
+SELECT SKU,SKU_DESCRIPTION FROM INVENTORY;
+SELECT SKU_DESCRIPTION,SKU FROM INVENTORY;
+SELECT  WarehouseID FROM INVENTORY;
+SELECT WarehouseID FROM Warehouse;
+SELECT WarehouseID,SKU,SKU_Description,QuantityOnHand,QuantityOnOrder FROM INVENTORY;
+SELECT * FROM INVENTORY;
+SELECT * FROM INVENTORY where QuantityOnHand > 0; 
+SELECT SKU,SKU_DESCRIPTION FROM INVENTORY where QuantityOnHand = 0; 
+SELECT SKU,SKU_Description,WarehouseID FROM INVENTORY WHERE QuantityOnHand = 0 ORDER BY WarehouseID ASC;
+SELECT  SKU, SKU_Description,WarehouseID FROM INVENTORY WHERE QuantityOnHand > 0 ORDER BY WarehouseID DESC, SKU ASC;
+SELECT SKU, SKU_Description,WarehouseID FROM INVENTORY WHERE QuantityOnHand = 0 or QuantityOnOrder > 0 ORDER BY WarehouseID DESC, SKU ASC;
+SELECT SKU, SKU_Description,WarehouseID FROM INVENTORY WHERE QuantityOnHand = 0 or QuantityOnOrder = 0 ORDER BY WarehouseID DESC, SKU ASC;
