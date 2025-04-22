@@ -36,4 +36,12 @@ PaymentMethod varchar(40) NOT NULL,
 primary key(PaymentID),
 foreign key(RideID) references Rides(RideID)   
 
-)
+);
+create table top_5_rated_drivers_lagos as
+select DriverID, Driver_Name, Rating from Drivers order by Rating desc limit 5;
+
+select * from top_5_rated_drivers_lagos;
+
+
+
+
